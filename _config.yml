@@ -1,5 +1,6 @@
 # General Jekyll Config
 highlighter: pygments
 url: http://example.com
-lsi: false
+lsi: true
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+permalink: /:categories/:title.html
