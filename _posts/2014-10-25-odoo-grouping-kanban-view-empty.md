@@ -36,7 +36,7 @@ The code above ensures that when displaying `store` objects grouped by `company_
 
 Methods listed in `_group_by_full` need to return a two element tuple:
 
-*   First element: a list of two element tuples, representing individual groups. Every tuple in the list need to include the particular group's value (in our example: id of a particular company) and a user friendly name for the group (in our example: company's name). That's why we can use the `name_get` method, since it returns a list of `(object id, object name)` tuples.
+*   First element: a list of two element tuples, representing individual groups. Every tuple in the list need to include the particular group's value (in our example: id of a particular company) and a user friendly name for the group (in our example: company's name). That's why we can use the [`name_get`][name_get] method, since it returns a list of `(object id, object name)` tuples.
 
 *   Second element: a dictionary mapping groups' values to a boolean value, indicating whether the group should be folded in Kanban view. Not including a group in this dictionary has the same meaning as mapping it to `False`.
 
@@ -106,3 +106,4 @@ class Store(models.Model):
 {% endhighlight %}
 
 [docs]: https://www.odoo.com/documentation/8.0/reference/views.html#kanban
+[name_get]: https://www.odoo.com/documentation/8.0/reference/orm.html#openerp.models.Model.name_get

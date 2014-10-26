@@ -3,8 +3,12 @@ layout: post
 title: Form widgets for many2one fields in Odoo
 categories: [odoo]
 ---
-## many2one widget (default)
-![many2many widget](/assets/images/many2one_widget.png)
+## Index
+1. [`many2one` widget (default)](#many2one-widget-default)
+1. [`many2onebutton` widget](#many2onebutton-widget)
+
+## `many2one` widget (default)
+![many2one widget](/assets/images/many2one_widget.png)
 
 **Options**
 
@@ -19,7 +23,9 @@ categories: [odoo]
 <field name="field_name" options="{'no_create': True}"/>
 {% endhighlight %}
 
-## many2onebutton widget
+---
+
+## `many2onebutton` widget
 This widget seems rather pointless. It's just a clickable circle.
 
 * It's red if the field is empty. Clicking on the red circle opens a form for creating a new related item (in a modal window).
