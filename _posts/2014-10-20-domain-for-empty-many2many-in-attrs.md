@@ -45,7 +45,7 @@ At the end it turned out (thank you Chrome Developer Tools!) that the domain sho
 
 {% highlight xml %}
 <field name="pony_ids" string="List your favourite ponies"/> <!-- many2many -->
-<div attrs="{'invisible': [('pony_ids', '=', [('pony_ids', '=', [(6, False, [])])])]}">
+<div attrs="{'invisible': [('pony_ids', '=', [(6, False, [])])]}">
     I like those too!
 </div>
 {% endhighlight %}
