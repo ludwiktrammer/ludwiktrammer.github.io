@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Changing element's attrs based on an empty many2many relation
+title: Changing attrs based on an empty many2many relation
 categories: [odoo]
 ---
 By using the `attrs` attribute on a view element you can dynamically set its attributes based on another field's value. For example you could make a field `long_description` read-only provided that `short_description` is not filled out:
