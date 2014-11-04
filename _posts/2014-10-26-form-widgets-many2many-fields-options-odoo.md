@@ -61,15 +61,24 @@ There's no way to use this widget to create new items.
 ---
 
 ## `many2many_kanban` widget
-The `many2many_kanban` widget uses a Kanban View to display a list of related objects. Requires that a Kanban View for the related model is defined.
+The `many2many_kanban` widget uses a Kanban View to display a list of related objects.
 
-This widget can have widely different look and feel, depending on the Kanban View it uses. Here's an example from the `project` module:
+This widget can have widely different look and feel, depending on the Kanban View it uses. Here's a screenshot from the `project` module:
 
 ![many2many_kanban widget](/assets/images/many2many_kanban_widget.png)
 
 **Example**
 {% highlight xml %}
-<field name="field_name" widget="many2many_kanban"/>
+<field name="field_name" widget="many2many_kanban">
+    <kanban>
+        <field name="name"/>
+        <templates>
+            <t t-name="kanban-box">
+                <field name="name"/>
+            </t>
+        </templates>
+    </kanban>
+</field>
 {% endhighlight %}
 ---
 
