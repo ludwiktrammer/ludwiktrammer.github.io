@@ -52,22 +52,22 @@ class Horse(models.Model):
 Instead of defining `_needaction_domain_get` method you could alternatively define a `_needaction_count` method and return a number of your choice directly:
 
 {% highlight python %}
-    @api.model
-    def _needaction_count(self, domain=None):
-        return 12
+@api.model
+def _needaction_count(self, domain=None):
+    return 12
 {% endhighlight %}
 
 Another example, making use of the `domain` argument:
 
 {% highlight python %}
-    @api.model
-    def _needaction_count(self, domain=None):
-        """
-        Count all objects in a view, deducting a dozen
-        before displaying on the badge
-        (we don't want to alarm people with big numbers)
-        """
-        return self.search_count(domain or []) - 12
+@api.model
+def _needaction_count(self, domain=None):
+    """
+    Count all objects in a view, deducting a dozen
+    before displaying on the badge
+    (we don't want to alarm people with big numbers)
+    """
+    return self.search_count(domain or []) - 12
 {% endhighlight %}
 
 
