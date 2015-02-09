@@ -1,15 +1,44 @@
 ---
 layout: default
-title: Blog Posts
+title: Odoo Blog
 ---
 
 <div id="home">
-  <h2><i class="icon-bookmark"></i> Blog Posts</h2>
+  <p>This is my <a href="http://odoo.com">Odoo</a> blog. You can learn more about me <a href="http://ludwik.trammer.pl">on my website</a>.</p>
+  <h2>Blog posts about Odoo</h2>
   <ul id="blog-posts" class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{% if post.categories %}[{{ post.categories[0] }}] {% endif %}{{ post.title }}</a> <a href="{{ post.url }}#comments" data-disqus-identifier="{{ post.id }}" class="comments_count"></a></li>
+      <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{% if post.categories %}<!--[{{ post.categories[0] }}] -->{% endif %}{{ post.title }}</a> <a href="{{ post.url }}#comments" data-disqus-identifier="{{ post.id }}" class="comments_count"></a></li>
     {% endfor %}
   </ul>
+  <hr/>
+
+  <h2>My Odoo bug reports</h2>
+  <ul id="bug-reports" class="posts">
+      <li><span>6 Feb 2015 &raquo;</span><a href="https://github.com/odoo/odoo/issues/5121">[#5121] related_sudo not respected on draft records</a></li>
+      <li><span>22 Jan 2015 &raquo;</span><a href="https://github.com/odoo/odoo/issues/4869">[#4869] active_id no longer guaranteed to be present while evaluating action's context</a></li>
+      <li><span>1 Dec 2014 &raquo;</span><a href="https://github.com/odoo/odoo/issues/3972"><s>[#3972] Problem with computed integer fields</s></a> [fixed]</li>
+      <li><span>29 Nov 2014 &raquo;</span><a href="https://github.com/odoo/odoo/issues/3957">[#3957] Changing sql constraints from parent model no longer possible</a></li>
+      <li><span>29 Sep 2014 &raquo;</span><a href="https://github.com/odoo/odoo/issues/2780">[#2780] No limit on database index identifier length, resulting in truncation, identifer colisions</a></li>
+  </ul>
+  <hr/>
+
+  <h2>My Odoo mailing list threads</h2>
+  <ul id="mail-threads" class="posts">
+      <li><span>02 Jan 2015 &raquo;</span><a href="https://www.odoo.com/groups/community-59/community-10336007">Per-field permissions</a></li>
+      <li><span>21 Dec 2014 &raquo;</span><a href="https://www.odoo.com/groups/community-59/community-10079729">Problems with the Indiegogo Campaign</a></li>
+      <li><span>10 Oct 2014 &raquo;</span><a href="https://www.odoo.com/groups/community-59/community-9609297">New Odoo programmer and his blog / Hello</a></li>
+  </ul>
+  <hr/>
+
+  <h2>My Odoo StackOverflow questions</h2>
+  <ul id="stack-questions" class="posts">
+      <li><span>17 Nov 2014 &raquo;</span><a href="http://stackoverflow.com/q/26970673/262618">Handling SQL constraint exceptions in Odoo ORM</a></li>
+      <li><span>26 Sep 2014 &raquo;</span><a href="http://stackoverflow.com/q/26062915/262618">“relation already exists” after adding a Many2many field in odoo</a></li>
+  </ul>
+  <hr/>
+  <h2>My Odoo StackOverflow answers</h2>
+  <p>There are quite a few. <a href="http://stackoverflow.com/search?tab=newest&q=user%3a262618%20%5bodoo%5d">You can see all of them here</a>.</a>
 </div>
 
 <script type="text/javascript">
