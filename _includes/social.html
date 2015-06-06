@@ -1,5 +1,11 @@
 Follow me:
 <div id="stalker">
+  {% if site.data.theme.social.facebook %}
+  <a title="{{ site.data.theme.name }} on Facebook" href="https://facebook.com/{{ site.data.theme.social.facebook }}">
+    <i class="fa fa-facebook-square"></i>
+  </a>
+  {% endif %}
+
   {% if site.data.theme.social.website %}
   <a title="My website" href="{{site.data.theme.social.website }}">
     <i class="fa fa-globe"></i>
@@ -48,12 +54,6 @@ Follow me:
   </a>
   {% endif %}
 
-  {% if site.data.theme.social.facebook %}
-  <a title="{{ site.data.theme.name }} on Facebook" href="https://facebook.com/{{ site.data.theme.social.facebook }}">
-    <i class="fa fa-facebook-square"></i>
-  </a>
-  {% endif %}
-
   {% if site.data.theme.social.tumblr %}
   <a title="{{ site.data.theme.name }} on tumblr" href="https://{{ site.data.theme.social.tumblr }}.tumblr.com">
     <i class="fa fa-tumblr-square"></i>
@@ -76,3 +76,4 @@ Follow me:
     <i class="fa fa-rss-square"></i>
   </a>
 </div>
+<div class="fb-page" data-href="https://www.facebook.com/odooludwik" data-width="220" data-height="400" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/odooludwik"><a href="https://www.facebook.com/odooludwik">Ludwik Trammer on Odoo</a></blockquote></div></div>
